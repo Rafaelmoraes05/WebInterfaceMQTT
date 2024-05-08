@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0; 
+    height: 60px; 
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+
+.container {
+    max-width: 700px;
+    margin: auto; 
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 60vh; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.message-box {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.green-dot, .blue-dot, .red-dot {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.green-dot {
+    background-color: #00ff00;
+}
+
+.blue-dot {
+    background-color: #0000ff;
+}
+
+.red-dot {
+    background-color: #ff0000;
+}
+
+/* Oculta o texto quando a classe da bolinha está presente */
+.green-dot::after, .blue-dot::after, .red-dot::after {
+    content: attr(data-number);
+    color: transparent;
+}

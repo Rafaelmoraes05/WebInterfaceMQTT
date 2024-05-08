@@ -11,20 +11,24 @@ topic = "temp/sub"
 client_id = f'subscribe-{random.randint(0, 100)}'
 username = 'telit'
 password = 'telit123'
+index=0
 
 # Lista para armazenar as mensagens
 messages = []
 
 def on_message(client, userdata, msg):
+    global index
     timestamp = time.time()
     formatted_time = datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
     message = {
         "timestamp": formatted_time,
         "topic": msg.topic,
-        "payload": msg.payload.decode()
+        "payload": msg.payload.decode(),
+        "index": index
     }
     # Adiciona a mensagem à lista
     messages.append(message)
+    index+=1
     # Chama a função para escrever as mensagens no arquivo JSON em tempo real
     write_messages_to_json()
 

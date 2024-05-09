@@ -18,12 +18,12 @@ Antes de começar, certifique-se de ter instalado o seguinte:
    ```bash
    git clone https://github.com/seu-usuario/WebInterfaceMQTT.git
 
-3. Navegue até o diretório do projeto:
+2. Navegue até o diretório do projeto:
    
    ```bash
    cd WebInterfaceMQTT
 
-4. Instale as dependências do Node.js utilizando o npm:
+3. Instale as dependências do Node.js utilizando o npm:
    
    ```bash
    npm install
